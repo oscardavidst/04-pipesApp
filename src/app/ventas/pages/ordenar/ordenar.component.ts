@@ -3,9 +3,12 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-ordenar',
   templateUrl: './ordenar.component.html',
-  styles: [
-  ]
+  styles: [],
 })
 export class OrdenarComponent {
+  enMayusculas: boolean = false;
 
+  toggleMayusculas() {
+    this.enMayusculas = !this.enMayusculas;
+  }
 }
