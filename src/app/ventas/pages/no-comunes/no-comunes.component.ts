@@ -36,4 +36,12 @@ export class NoComunesComponent {
   borrarCliente() {
     this.clientes.pop();
   }
+
+  // KeyValue Pipe
+  persona = {
+    nombre: 'Oscar Soto',
+    edad: 27,
+    direccion: 'Bogotá, Cll 6D # 80B-89',
+    altura: '165cm',
+  };
 }
