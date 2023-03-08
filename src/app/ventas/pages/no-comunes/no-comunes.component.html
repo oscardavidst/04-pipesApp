@@ -8,8 +8,18 @@
       [toggleable]="true"
       [transitionOptions]="'90ms'"
     >
-      Saludos {{ nombre }}, es un placer
-      {{ genero | i18nSelect : invitacionMapa }} a nuestro evento.
+      <p>
+        Saludos {{ nombre }}, es un placer
+        {{ genero | i18nSelect : invitacionMapa }} a nuestro evento.
+      </p>
+      <button
+        pButton
+        label="Cambiar persona"
+        class="p-button-success"
+        icon="pi pi-users"
+        iconPos="left"
+        (click)="cambiarCliente()"
+      ></button>
     </p-fieldset>
   </div>
   <div class="col md:col-6 sm:col-12">
@@ -18,8 +28,21 @@
       [toggleable]="true"
       [transitionOptions]="'90ms'"
     >
-      Actualmente
-      {{ clientes.length | i18nPlural : clientesMapa }} esperando.
+      <p>
+        Actualmente
+        {{ clientes.length | i18nPlural : clientesMapa }} esperando.
+      </p>
+      <ul *ngIf="clientes.length">
+        <li *ngFor="let cliente of clientes">{{ cliente }}</li>
+      </ul>
+      <button
+        pButton
+        label="Borrar cliente"
+        class="p-button-danger"
+        icon="pi pi-user-minus"
+        iconPos="left"
+        (click)="borrarCliente()"
+      ></button>
     </p-fieldset>
   </div>
 </div>

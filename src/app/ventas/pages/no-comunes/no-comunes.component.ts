@@ -16,10 +16,24 @@ export class NoComunesComponent {
   };
 
   //i18nPlural
-  clientes: string[] = ['Maria', 'Oscar'];
+  clientes: string[] = ['Maria', 'Oscar', 'David', 'Adnilec'];
   clientesMapa = {
     '=0': 'no tenemos nigún cliente',
     '=1': 'tenemos un cliente',
     other: 'tenemos # clientes',
   };
+
+  cambiarCliente() {
+    if (this.genero === 'masculino') {
+      this.nombre = 'Adnilec';
+      this.genero = 'femenino';
+    } else {
+      this.nombre = 'Oscar';
+      this.genero = 'masculino';
+    }
+  }
+
+  borrarCliente() {
+    this.clientes.pop();
+  }
 }
