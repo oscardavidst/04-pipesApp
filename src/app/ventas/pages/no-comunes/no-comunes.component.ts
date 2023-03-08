@@ -44,4 +44,20 @@ export class NoComunesComponent {
     direccion: 'Bogotá, Cll 6D # 80B-89',
     altura: '165cm',
   };
+
+  //JsonPipe
+  heroes = [
+    {
+      nombre: 'SuperMan',
+      vuela: true,
+    },
+    {
+      nombre: 'Robin',
+      vuela: false,
+    },
+    {
+      nombre: 'AquaMan',
+      vuela: false,
+    },
+  ];
 }
